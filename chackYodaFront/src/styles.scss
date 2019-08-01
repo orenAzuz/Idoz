@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+@import '~@angular/material/theming';
+
+$general-typography: mat-typography-config(
+  $font-family: '"Raleway", "Arial","Varela Round","Roboto", serif ,sans-serif' ,
+ 
+);
+
+@include mat-core($general-typography); 
+$custom-primary: mat-palette($mat-cyan,A700);
+$custom-accent: mat-palette($mat-cyan,A700);
+
+$custom-theme: mat-light-theme($custom-primary, $custom-accent);
+@include angular-material-theme($custom-theme);

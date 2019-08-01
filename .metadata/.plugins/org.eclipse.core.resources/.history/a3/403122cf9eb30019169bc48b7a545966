@@ -1,0 +1,40 @@
+package com.orez.pojos;
+
+public class Person {
+	
+	private String id;
+	private String Name;
+	
+	
+	public Person() {}
+
+
+	public Person(String id, String name) {
+		super();
+		this.id = id;
+		Name = name;
+	}
+
+
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
+	public String getName() {
+		return Name;
+	}
+
+
+	public void setName(String name) {
+		Name = name;
+	}
+	
+	
+
+}

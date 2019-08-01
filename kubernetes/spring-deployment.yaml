@@ -1,0 +1,65 @@
+
+
+apiVersion: apps/v1 
+kind: StatefulSet
+metadata:
+  name: backend
+spec:
+  serviceName: "backend"
+  selector:
+    matchLabels:
+      app: backend
+  replicas: 1  
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers: 
+      - name: backend
+        imagePullPolicy: Always
+        image: gcr.io/useful-patrol-241412/chack-yodis-back:v1
+        ports:
+        - containerPort: 8080
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# this is as Deploment
+
+# apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+# kind: Deployment
+# metadata:
+#   name: cooks
+# spec:
+#   selector:
+#     matchLabels:
+#       app: cooks
+#   replicas: 4  # tells deployment to run 2 pods matching the template
+#   template:
+#     metadata:
+#       labels:
+#         app: cooks
+#     spec:
+#       # initContainers:
+#       # - name: init-mydb
+#         # image: busybox:1.28   gcr.io/useful-patrol-241412/cooksfront
+#         # command: ['sh', '-c', 'until nslookup db; do echo waiting for db; sleep 2; done;']
+#       containers:
+#       - name: cooks
+#         imagePullPolicy: Always
+#         image: gcr.io/useful-patrol-241412/cooks:v1
+#         ports:
+#         - containerPort: 8080
+      

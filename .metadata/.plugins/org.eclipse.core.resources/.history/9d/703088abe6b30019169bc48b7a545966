@@ -1,0 +1,52 @@
+package com.orez.pojos;
+
+import java.util.Date;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class ChackYodaFacts {
+	
+	@Id
+	private int id;
+	private String fatct_text;
+	private Date enterd_date;
+	
+	public ChackYodaFacts() {}
+
+	public ChackYodaFacts(int id, String fatct_text, Date enterd_date) {
+		super();
+		this.id = id;
+		this.fatct_text = fatct_text;
+		this.enterd_date = enterd_date;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFatct_text() {
+		return fatct_text;
+	}
+
+	public void setFatct_text(String fatct_text) {
+		this.fatct_text = fatct_text;
+	}
+
+	public Date getEnterd_date() {
+		return enterd_date;
+	}
+
+	public void setEnterd_date(Date enterd_date) {
+		this.enterd_date = enterd_date;
+	}
+	
+	
+	
+
+}

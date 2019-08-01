@@ -1,0 +1,5 @@
+package com.orez.pojos;
+
+public class Person {
+
+}

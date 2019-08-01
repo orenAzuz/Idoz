@@ -1,0 +1,17 @@
+package com.orez.pojos;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public class ChackNorris {
+	
+	private String id;
+	private ArrayList<String> categories;
+	private Date created_at;
+	private String icon_url;
+	private Date updated_at;
+	private String url;
+	private String value;
+	
+
+}

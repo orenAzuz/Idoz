@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  backend:
+    image: chack-yodis-back
+    restart: always
+    container_name: backend
+    depends_on:
+      - mongo
+  
+  mongo:
+    image: chack-yoda-db
+    container_name: mongo
+    # command: bash -c "mongorestore --db CookProDb --drop ./ChackYoda"
+    volumes:
+      - $HOME/data/backend-data:/data/db
+      - $HOME/data/backend-bkp:/data/bkp
+      - $HOME/data/ChackYoda:/data/ChackYoda
+    restart: on-failure
+   # command: mongorestore --db ChackYoda --drop ./ChackYoda
+
+  front:
+    image: chack-yoda-front
+    restart: always
+    container_name: chack-yoda-front
+    ports:
+      - 80:80

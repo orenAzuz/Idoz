@@ -1,0 +1,28 @@
+package com.orez.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.orez.pojos.Person;
+import com.orez.services.MainService;
+
+@RestController
+public class MainController {
+	
+	@Autowired
+	private MainService service;
+	
+	
+	@RequestMapping(method=RequestMethod.GET ,value = "/sai" )
+	public String getMe () {
+		System.out.println("hello");
+		this.service.getChuckNorrisRundom();
+		return "<h1>The Chuck Norris jock is</h1>";
+	}
+
+	
+}

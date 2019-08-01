@@ -1,0 +1,46 @@
+
+
+.close {
+
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    cursor: pointer;
+}
+
+h2 {
+
+    font-family: 'Roboto';
+    font-weight: 100;
+    color: rgb(49, 20, 61);
+    display:inline;
+
+}
+
+h1 {
+    display:inline;
+    font-family: 'Roboto';
+    font-weight: 200;
+    color: rgb(38, 24, 39);
+}
+
+button {
+
+    position: relative;
+    margin: 5% 45%;
+  
+    // height: 155px;
+    // width: 20%;
+
+}
+
+.snipper {
+
+    position: relative;
+    margin: 15% 44%;
+}
+.text {
+
+    margin: 3%;
+    padding:0 5%;
+}

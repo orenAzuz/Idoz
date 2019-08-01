@@ -1,0 +1,35 @@
+
+
+<div>
+  <mat-tab-group>
+    <mat-tab label="Fact">
+      <div>
+       
+        <button *ngIf="snipper === false" mat-raised-button color="primary" (click)="getFact()" >Get One Fact</button>
+        <mat-spinner class="snipper" *ngIf="snipper === true"></mat-spinner>
+        <mat-card *ngIf="fact != undefined">
+            <mat-icon class="material-icons color close" 
+            (click)="setFactToUndefined()"  > close</mat-icon>
+            <div class="text">
+                <div>
+                  <h1>Fact Id:   </h1> <h2>{{fact.id + 1}}</h2>
+                    </div>
+                        <div>
+                          <h1>Fact Text: </h1> <h2> {{fact.fact_text}} </h2>
+                        </div>
+                     <div>
+                  <h1>Enterd Date: </h1> <h2> {{fact.enterd_date | date}} </h2>  
+                </div>
+        </div>
+        </mat-card>
+      </div></mat-tab>
+
+
+    <mat-tab label="All Facts">
+    <app-table></app-table>  
+    </mat-tab>
+  
+  </mat-tab-group>
+</div>
+
+<router-outlet></router-outlet>

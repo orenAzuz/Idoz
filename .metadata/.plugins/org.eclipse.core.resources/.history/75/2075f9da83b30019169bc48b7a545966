@@ -1,0 +1,26 @@
+package com.orez.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+public class MainService {
+	
+	
+	@Autowired
+	private MongoOperations mongoOperations;
+	
+	
+	public void getChuckNorrisRundom()
+	{
+	    final String uri = "https://api.chucknorris.io/jokes/random";
+
+	    RestTemplate restTemplate = new RestTemplate();
+	    String result = restTemplate.getForObject(uri, String.class);
+
+	    System.out.println(result);
+	}
+
+}
