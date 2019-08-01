@@ -1,13 +1,17 @@
 # Idoz Chack-Yoda project.
 
 Watch the project alive on google cloud: http://34.67.58.237/
+The project sits on a kubernetes cluster and consists of three servers.
+Front-end on alpine/nginx Back-end alpine/java and the db alpine/mongodb. 
 
-# Usage
+# Usage For docker, docker-compose.
 
 Ther is an execute file name buildAndExecute.sh this file will build all docker images and run the docker-compose up
 and initiate the data.
 the application will listen on localhost:80.
 
-Note: if you would like to serve the project local you should check first the service.ts file and look for the URL 
-field and see if it matches to the server URL the spring-boot.
+# To run it on local machine
+
+Note: if you would like to serve the project localic you should make sure that the service.ts file and look for the URL 
+field and mack sure it matches to the server URL the spring-boot.
 
