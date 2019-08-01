@@ -1,4 +1,4 @@
-# Idoz Chack-Yoda project.
+# Idoz Chuck-Yoda project.
 
 Watch the project alive on google cloud: http://34.67.58.237/
 The project sits on a kubernetes cluster and consists of three servers.
