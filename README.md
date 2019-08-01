@@ -12,6 +12,6 @@ the application will listen on localhost:80.
 
 # To run it on local machine
 
-Note: if you would like to serve the project localic you should make sure that the service.ts file and look for the URL 
-field and mack sure it matches to the server URL the spring-boot.
+Note: if you would like to serve the project localic you should make sure that in the service.ts file URL 
+field matches to the URL that the server listing.
 
