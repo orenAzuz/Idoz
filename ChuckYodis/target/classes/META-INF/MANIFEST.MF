@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ChuckYodis
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: oren
+Implementation-Vendor-Id: com.orez
+Build-Jdk: 1.8.0_212
+Implementation-URL: http://projects.spring.io/spring-boot/ChuckYodis/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
