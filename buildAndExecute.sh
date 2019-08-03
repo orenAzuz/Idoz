@@ -3,6 +3,7 @@ cd chackYodaFront
 docker build -t chack-yoda-front .
 cd ..
 cd ChuckYodis
+mvn package
 docker build -t chack-yodis-back .
 cd ..
 docker build -t chack-yoda-db .
